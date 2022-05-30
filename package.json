@@ -1,0 +1,24 @@
+{
+  "name": "router-code-splitting",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build:rollup": "rimraf dist/ && rollup -c",
+    "build:webpack": "webpack"
+  },
+  "dependencies": {
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-router-dom": "6"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@swc/core": "^1.2.194",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.75.3",
+    "rollup-plugin-swc3": "^0.3.0",
+    "webpack": "^5.72.1"
+  }
+}
