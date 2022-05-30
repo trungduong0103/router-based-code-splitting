@@ -1,0 +1,1 @@
+# This repository demonstrates how to use code-splitting with react-router-dom and React.lazy()
