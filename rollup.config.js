@@ -6,11 +6,13 @@ export default {
   preserveEntrySignatures: true,
   input: "src/index.js",
   output: {
+    // the following config will not allow code-splitting
+    // file: "main.js",
+    // the following config will allow code-splitting
     dir: "dist",
     entryFileNames: "[name].js",
-    // file: "main.js", <-- this will not allow rollup to split chunk
     format: "es",
-
+    // optional: to split libraries into their own chunks
     manualChunks: {
       reactVendor: ["react", "react-dom"],
       reactRouterVendor: ["react-router-dom"],
@@ -18,6 +20,7 @@ export default {
   },
   plugins: [
     resolve(),
+    // ignore src/ folder because we're compiling it to esm anyways
     commonjs({ exclude: /src/ }),
     swc({
       include: [/\.[jt]sx?$/],
