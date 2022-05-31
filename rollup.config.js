@@ -3,7 +3,6 @@ import resolve from "@rollup/plugin-node-resolve";
 import { swc } from "rollup-plugin-swc3";
 
 export default {
-  preserveEntrySignatures: true,
   input: "src/index.js",
   output: {
     // the following config will not allow code-splitting
