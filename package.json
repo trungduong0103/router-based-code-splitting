@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build:rollup": "rimraf dist/ && rollup -c",
+    "build:rollup": "rimraf dist/ bundle/ && rollup -c",
     "build:webpack": "webpack"
   },
   "dependencies": {

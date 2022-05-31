@@ -7,16 +7,16 @@ export default {
   input: "src/index.js",
   output: {
     // the following config will not allow code-splitting
-    // file: "main.js",
+    file: "bundle/main.js",
     // the following config will allow code-splitting
-    dir: "dist",
-    entryFileNames: "[name].js",
+    // dir: "dist",
+    // entryFileNames: "[name].js",
     format: "es",
     // optional: to split libraries into their own chunks
-    manualChunks: {
-      reactVendor: ["react", "react-dom"],
-      reactRouterVendor: ["react-router-dom"],
-    },
+    // manualChunks: {
+    //   reactVendor: ["react", "react-dom"],
+    //   reactRouterVendor: ["react-router-dom"],
+    // },
   },
   plugins: [
     resolve(),

@@ -1,14 +1,14 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-const LazyHome = React.lazy(() => import("./pages/Home"));
-const LazyAbout = React.lazy(() => import("./pages/About"));
+import About from "./pages/About";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/about" element={<LazyAbout />} />
-        <Route path="/home" element={<LazyHome />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/home" element={<Home />} />
       </Routes>
     </Router>
   );
